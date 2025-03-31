@@ -1,0 +1,65 @@
+@use '@angular/material' as mat;
+@use 'mixins';
+@use 'sizes';
+
+:host {
+  .wrapper {
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 30px;
+    font-size: 16px;
+    text-transform: capitalize;
+    box-shadow: 0 1px 10px -7px var(--mat-sys-on-background);
+    @include mat.toolbar-overrides((
+      "container-background-color": var(--mat-sys-background),
+      "standard-height": sizes.$welcome-header-height,
+    ));
+
+    .tool-btn {
+      font-size: 18px;
+      border-radius: 50%;
+      background: var(--mat-sys-primary);
+      color: var(--mat-sys-on-primary);
+    }
+
+    .nav-btn {
+      font-size: 18px;
+    }
+
+    .left-header-container {
+      display: flex;
+      align-items: center;
+
+      img {
+        flex-shrink: 0;
+        //border-radius: 10px;
+        margin-right: 20px;
+        //border: 1px solid var(--mat-sys-primary);
+        //background-image: radial-gradient(
+        //    circle at center,
+        //    var(--mat-sys-primary) 30%,
+        //    var(--mat-sys-background),
+        //    transparent
+        //);
+      }
+    }
+
+    .right-header-container {
+      display: flex;
+      align-items: center;
+      height: 60%;
+      gap: 10px;
+
+      & > * {
+        flex-shrink: 0;
+      }
+
+      hr {
+        height: 100%;
+        margin: 0 10px;
+        border-color: var(--mat-sys-on-background);
+        opacity: 0.5;
+      }
+    }
+  }
+}

@@ -1,12 +1,13 @@
-const { app, BrowserWindow } = require('electron/main');
+
+import { app, BrowserWindow } from 'electron/main';
 
 const isMacOS = process.platform === 'darwin';
 
 const createWindow = () => {
   const win = new BrowserWindow({
-    width: 800,
+    width: 1000,
     height: 600,
-    titleBarStyle: isMacOS ? 'hiddenInset' : 'default',
+    titleBarStyle: 'default',
     frame: isMacOS,
     webPreferences: {
       nodeIntegration: true
@@ -14,6 +15,8 @@ const createWindow = () => {
   });
 
   win.loadFile('dist/vm-translate/browser/index.html').then();
+
+  win.webContents.openDevTools({ mode: 'right' });
 
 }
 

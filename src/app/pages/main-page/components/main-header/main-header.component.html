@@ -1,0 +1,40 @@
+<mat-toolbar class="wrapper">
+
+  <div class="left-header-container">
+    <img
+      priority
+      draggable="false"
+      ngSrc="assets/images/vmt-logo.png" alt="VMTLogo"
+      width="90"
+      height="90"/>
+    <nav>
+      <button
+        mat-button
+        type="button"
+        class="nav-btn"
+        (click)="onAddKeyClick()">
+        projects
+      </button>
+    </nav>
+  </div>
+
+  <div class="right-header-container">
+    <button
+      mat-mini-fab
+      type="button"
+      class="tool-btn"
+      (click)="onAddKeyClick()">
+      <mat-icon>add_circle_outline</mat-icon>
+    </button>
+    <button
+      mat-mini-fab
+      type="button"
+      class="tool-btn"
+      (click)="onSaveClick()">
+      <mat-icon>save</mat-icon>
+    </button>
+    <hr>
+    <vmt-select-language></vmt-select-language>
+  </div>
+
+</mat-toolbar>

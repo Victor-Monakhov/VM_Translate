@@ -1,0 +1,20 @@
+@mixin hover-underline($line-width, $offset, $color, $opacity: 1) {
+  bottom: $offset;
+  &:before {
+    content: '';
+    box-sizing: border-box;
+    position: absolute;
+    top: $offset;
+    left: 50%;
+    transform: translateX(-50%);
+    border-bottom: $line-width solid $color;
+    height: 100%;
+    width: 0;
+    opacity: $opacity;
+  }
+
+  &:hover:before {
+    width: 100%;
+    transition: width 300ms;
+  }
+}
