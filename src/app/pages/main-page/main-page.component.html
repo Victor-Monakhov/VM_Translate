@@ -1,3 +1,19 @@
-<header>
-  <vmt-welcome-header></vmt-welcome-header>
-</header>
+<div class="wrapper">
+  <header class="main-header">
+    <vmt-welcome-header></vmt-welcome-header>
+  </header>
+  <main [ngClass]="{'main-workspace': true, 'main-workspace-empty': !projects().length}">
+    @if (!projects().length) {
+      <div class="no-projects">
+        <small>There are no projects yet...</small>
+        <button
+          mat-flat-button
+          class="new-project-btn"
+          type="button"
+          (click)="onNewProject()">
+          Create New Project
+        </button>
+      </div>
+    }
+  </main>
+</div>

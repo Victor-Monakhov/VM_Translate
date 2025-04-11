@@ -1,0 +1,26 @@
+:host {
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 30px 20px;
+
+    & > * {
+      flex-shrink: 0;
+      width: 100%
+    }
+
+    .title {
+      text-align: center;
+      font-size: 30px;
+      margin-bottom: 30px;
+      color: var(--mat-sys-primary);
+    }
+
+    .new-project-form {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+  }
+}

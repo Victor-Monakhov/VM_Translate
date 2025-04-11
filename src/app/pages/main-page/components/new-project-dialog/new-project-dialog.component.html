@@ -1,0 +1,12 @@
+<div class="wrapper">
+
+  <h2 class="title">NEW PROJECT</h2>
+
+  <form class="new-project-form" [formGroup]="form">
+    <vm-input-text
+      formControlName="name"
+      label="Project Name">
+      <vm-validation [formControl]="nameControl()"></vm-validation>
+    </vm-input-text>
+  </form>
+</div>

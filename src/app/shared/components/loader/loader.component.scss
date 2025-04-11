@@ -1,0 +1,24 @@
+:host {
+  .wrapper {
+    width: 100%;
+    height: 100%;
+    svg {
+      width: 100%;
+      height: 100%;
+      .outside-part {
+        transform-origin: center;
+        fill: var(--mat-sys-primary);
+        animation: loader_anim 1s linear infinite;
+      }
+      .inside-part {
+        transform-origin: center;
+        fill: var(--mat-sys-primary);
+        animation: loader_anim 1s linear reverse infinite;
+      }
+    }
+  }
+
+  @keyframes loader_anim {
+    100%{transform: rotate(360deg)}
+  }
+}

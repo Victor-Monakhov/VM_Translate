@@ -1,10 +1,10 @@
 {
   "name": "vm-translate",
   "version": "0.0.0",
-  "main": "electron.js",
+  "main": "electron/main.js",
   "scripts": {
     "ng": "ng",
-    "start": "ng build --base-href ./ && electron .",
+    "start": "ng build --configuration production --base-href ./ && electron-vite build --config electron.config.ts && electron ./dist/electron/main.js",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
@@ -44,6 +44,7 @@
     "@typescript-eslint/eslint-plugin": "7.2.0",
     "@typescript-eslint/parser": "7.2.0",
     "electron": "^35.1.2",
+    "electron-vite": "^3.1.0",
     "eslint": "^8.57.0",
     "eslint-plugin-import": "^2.29.1",
     "eslint-plugin-rxjs": "^5.0.3",

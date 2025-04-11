@@ -1,0 +1,10 @@
+.vmt-dialog {
+  width: 400px;
+  min-height: 500px;
+  border-radius: 8px;
+
+  .mat-mdc-dialog-surface {
+    border-radius: 8px;
+    background: var(--mat-sys-background);
+  }
+}

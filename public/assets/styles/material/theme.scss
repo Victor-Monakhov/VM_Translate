@@ -2,10 +2,9 @@
 @use 'sass:map';
 
 @forward 'material/mat-select';
-//@forward 'material/mat-dialog';
-//@forward 'material/mat-input';
-//@forward 'material/mat-icon';
-//@forward 'material/mat-button';
+@forward 'material/mat-dialog';
+@forward 'material/mat-input';
+@forward 'material/mat-button';
 
 @function _patch-error-palette($palette) {
   @return map.merge(

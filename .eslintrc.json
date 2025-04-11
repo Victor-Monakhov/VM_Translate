@@ -228,8 +228,8 @@
         "import/newline-after-import": "error",
         "import/no-duplicates": "error",
 
-        "@angular-eslint/directive-selector": ["error", { "type": "attribute", "prefix": ["vmt"], "style": "camelCase" }],
-        "@angular-eslint/component-selector": ["error", { "type": "element", "prefix": ["vmt"], "style": "kebab-case" }],
+        "@angular-eslint/directive-selector": ["error", { "type": "attribute", "prefix": ["vmt", "vm"], "style": "camelCase" }],
+        "@angular-eslint/component-selector": ["error", { "type": "element", "prefix": ["vmt", "vm"], "style": "kebab-case" }],
         "@angular-eslint/no-empty-lifecycle-method": "error",
         "@angular-eslint/no-output-native": "error",
         "@angular-eslint/prefer-on-push-component-change-detection": "warn",
