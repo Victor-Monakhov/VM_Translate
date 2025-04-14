@@ -8,6 +8,7 @@ import { filter, Subject, switchMap } from 'rxjs';
 
 import { MainHeaderComponent } from './components/main-header/main-header.component';
 import { NewProjectDialogComponent } from './components/new-project-dialog/new-project-dialog.component';
+import { StateService } from './services/state/state.service';
 
 @Component({
   selector: 'vmt-main-page',
@@ -19,6 +20,7 @@ import { NewProjectDialogComponent } from './components/new-project-dialog/new-p
   ],
   templateUrl: './main-page.component.html',
   styleUrl: './main-page.component.scss',
+  providers: [StateService],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class MainPageComponent implements OnInit {
@@ -27,12 +29,16 @@ export class MainPageComponent implements OnInit {
 
   newProject$ = new Subject<void>();
 
+
   private readonly dialog = inject(MatDialog);
   private readonly dr = inject(DestroyRef);
+  private readonly stateService = inject(StateService);
 
   ngOnInit(): void {
     this.observeNewProject();
+    this.stateService.loadState$.next();
   }
+
 
   onNewProject(): void {
     this.newProject$.next();

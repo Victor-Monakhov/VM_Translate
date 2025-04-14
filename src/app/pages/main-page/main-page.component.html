@@ -3,6 +3,18 @@
     <vmt-welcome-header></vmt-welcome-header>
   </header>
   <main [ngClass]="{'main-workspace': true, 'main-workspace-empty': !projects().length}">
+<!--    @if (!projectsDirectory()) {-->
+<!--      <div class="no-projects">-->
+<!--        <small>Choose a folder where your projects will be saved...</small>-->
+<!--        <button-->
+<!--          mat-flat-button-->
+<!--          class="new-project-btn"-->
+<!--          type="button"-->
+<!--          (click)="onNewProject()">-->
+<!--          Choose Folder-->
+<!--        </button>-->
+<!--      </div>-->
+<!--    } -->
     @if (!projects().length) {
       <div class="no-projects">
         <small>There are no projects yet...</small>

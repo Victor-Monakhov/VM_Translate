@@ -12,8 +12,14 @@ export default defineConfig({
       },
     }
   },
-  // preload: {
-  //   // Optional, if you have a preload script
-  //   // input: '',
-  // },
+  preload: {
+    build: {
+      outDir: 'dist/electron-preload',
+      rollupOptions: {
+        input: {
+          main: path.resolve(__dirname, 'electron-preload/preload.ts')
+        }
+      },
+    }
+  },
 });
